@@ -905,12 +905,14 @@ document.addEventListener('mousedown', (event) => {
 
 // --- Game Loop ---
 // --- Game Loop ---
+let rolled = false;
 function animate() {
     requestAnimationFrame(animate);
     const deltaTime = clock.getDelta();
 
-    if (playerCurrentHealth <= 0) {
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    if (playerCurrentHealth <= 0 && !rolled) {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        rolled = true;
     }
 
     timeSinceLastLaunch += deltaTime;
@@ -1014,7 +1016,7 @@ function animate() {
     if (boss && bossCurrentHealth <= 0 && !isBossDefeated) {
         isBossDefeated = true;
         console.log("Boss has been defeated! Applying defeat glow.");
-        alert("u did it sigma! u defeated the boss! have a good birthday fr!!!!!!!!!!!!!!!!!!")
+        alert("u did it sigma! years of gahyshin has taught u to defeat gojo. Have a Good Birthday Sigma!")
         if (boss.material && boss.material.isMeshStandardMaterial) {
             boss.material.emissive.setHex(0xffffff);
             boss.material.emissiveIntensity = bossDefeatGlowIntensity;
