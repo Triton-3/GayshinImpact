@@ -1,0 +1,52 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Gayshin Impact</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div id="intro">
+                <div id = "bg"></div>
+                <video src = "textures/GenshinIntro.mp4" id = "introVid"></video>
+                <div id = "cover"></div>
+            </div>
+
+            <div id = "content">
+                <div id="healthbar-container">
+                    <div id="healthbar"></div>
+                    <div id="healthbar-text">69,420 / 69,420</div>
+                </div>
+
+                <div id = "character-select"></div>
+
+                <div id="boss-text-container">
+                    <p id="boss-name">Gojo Satoeru</p>
+                    <p id="boss-desc">Throughout Heaven and Earth, I Alone Am the Sussy One</p>
+                </div>
+                <div id="boss-container">
+                    <div id="boss-healthbar"></div>
+                </div>
+
+                <div id="burst-container">
+                    <div class="circle-container">
+                    <div class="fill" id="fill"></div>
+                    <img src="textures/burst.png" class="circle-image" alt="icon" />
+                    </div>
+                    <p id="burst-key">Q</p>
+                </div>
+            </div>
+
+            <!-- Updated Three.js to r163 -->
+            <script type="importmap">
+                {
+                    "imports": {
+                        "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+                        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+                    }
+                }
+            </script>
+            <!-- Note: main.js needs to be type="module" now -->
+        <script type="module" src="main.js"></script>
+        </body>
+    </html>
